@@ -8,6 +8,7 @@ c.) To Add the library to the IDE:
   - Goto Sketch->Include Library->Add .Zip Library  
   - When prompted select the .Zip folder, the IDE should automaticlly add the library to be used  
 
+## Changing Node Code
 1.) Aquire the "StationNode.ino" code  
 2.) Open the code up in the Arduino IDE  
 3.) Register your device on the website http://137.104.120.150:5000  
