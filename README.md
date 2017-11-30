@@ -1,4 +1,4 @@
-#Setting Up a Station Node##
+## Setting Up a Station Node
 
 PREREQUISIT TO UPLOAD CODE: The SFE_BMP180 library
 
@@ -19,6 +19,6 @@ c.) To Add the library to the IDE:
 	of collectData(). As well as updating collectData() to work with you device
 
 
-##Reference:
+## Reference:
 -For BMP LIb: https://learn.sparkfun.com/tutorials/bmp180-barometric-pressure-sensor-hookup-/installing-the-arduino-library
 -HC12 Example: https://www.allaboutcircuits.com/projects/understanding-and-implementing-the-hc-12-wireless-transceiver-module/
