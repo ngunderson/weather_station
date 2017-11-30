@@ -85,7 +85,8 @@ bool  sendWeather()
   String msg = (String)"{\"id\":" + DEVICEID + ",\"temp\":" + writeBuffer + "}\n";        //Create the message to send to the Host node
   Serial.print(msg);//Debug purpose
   readBuffer = "";                                          //Clear the Read buffer
-  int count = 0;
+  int count = 1;
+  Serial.println((String)"Try: " + count);
   unsigned long curTime = millis();
   HC12.print(msg);
   while(count < MAXCOUNT)                       //Set up for a 5 count and stop when something is recived Todo:Check what was recived and set the flag if its the ACK
@@ -93,8 +94,6 @@ bool  sendWeather()
     if((millis() - curTime) >= TIMEOUT)                     //Checking the time (set up as a running timer instead of dela())
     {
       curTime = millis();                                   //Set Current Time
-      ++count;                                              //Increment Counter
-      Serial.println((String)"Try: " + count);
       char input = ' ';
       while(HC12.available() && input != '\n')             //Check if data was recived
       {
@@ -102,12 +101,13 @@ bool  sendWeather()
         readBuffer += char(input);
       }
       readBuffer.trim();
-      if(readBuffer.equals((String)DEVICEID + ":ACK")) {   //Checks to see if the readBuffer equals the correct expected ACK from the host 
+      if(readBuffer.equals((String)DEVICEID + ":ACK")) {   //Checks to see if the readBuffer equals the correct expected ACK from the host
         return true;
       }
+      ++count;                                              //Increment Counter
+      Serial.println((String)"Try: " + count);
       HC12.print(msg);                                    //Sends the message to the Host node
     }
   }
   return false;
 }
-
