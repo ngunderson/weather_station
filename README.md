@@ -1,12 +1,12 @@
-## Setting Up a Station Node
+# Setting Up a Station Node
 
-PREREQUISIT TO UPLOAD CODE: The SFE_BMP180 library
+## PREREQUISIT TO UPLOAD CODE: The SFE_BMP180 library
 
 a.) The Zip file is located in the reposiry called "BMP180_Breakout_Arduino_Library-master"  
 b.) Download this and save it to a temporary location  
 c.) To Add the library to the IDE:  
-	Goto Sketch->Include Library->Add .Zip Library  
-	When prompted select the .Zip folder, the IDE should automaticlly add the library to be used  
+	- Goto Sketch->Include Library->Add .Zip Library  
+	- When prompted select the .Zip folder, the IDE should automaticlly add the library to be used  
 
 1.) Aquire the "StationNode.ino" code  
 2.) Open the code up in the Arduino IDE  
