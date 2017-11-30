@@ -6,7 +6,7 @@
 const int DEVICEID = 1;
 const int MAXCOUNT = 5;     // attempt to send data 5 times
 const long TIMEOUT = 10000; // wait for 10 seconds between attempts
-const long sWait = 300000;  // sleep for an hour between requests
+const long sWait = 3600000;  // sleep for an hour between requests
 SFE_BMP180 sens1;
 /////////////////////////////////////
 
